@@ -326,7 +326,7 @@ export default function App() {
           <div className="container">
             <div className="center">
               <div className="tag">Procedimentos</div>
-              <h2>Demandas que atendemos</h2>
+              <h2>Soluções para empresas e profissionais técnicos</h2>
             </div>
 
             <div className="list">
