@@ -1,5 +1,5 @@
 export default function App() {
-  const Contato = "https://wa.me/5511967036453";
+  const whatsapp = "https://wa.me/5511967036453";
 
   return (
     <div>
