@@ -1,5 +1,5 @@
 export default function App() {
-  const whatsapp = "https://wa.me/5511967036453";
+  const Contato = "https://wa.me/5511967036453";
 
   return (
     <div>
@@ -326,7 +326,7 @@ export default function App() {
           <div className="container">
             <div className="center">
               <div className="tag">Procedimentos</div>
-              <h2>Demandas que atendemos</h2>
+              <h2>Soluções administrativas para empresas e profissionais técnicos</h2>
             </div>
 
             <div className="list">
@@ -379,9 +379,8 @@ export default function App() {
           <div className="container contact">
             <div>
               <div className="tag">Contato</div>
-              <h2>Solicite orientação</h2>
+              <h2>Solicite uma análise</h2>
               <p>WhatsApp: (11) 96703-6453</p>
-              <p>E-mail: contato@plpaulino.com.br</p>
               <p>Atendimento: todo o território nacional.</p>
             </div>
 
@@ -400,7 +399,7 @@ export default function App() {
 
       <footer>
         <div className="container">
-          PL Paulino — Assessoria Administrativa.
+          PL Paulino Assessoria Administrativa.
         </div>
       </footer>
     </div>
