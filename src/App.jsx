@@ -1,109 +1,65 @@
-export default function () {
-  const telefone = "5511967036453";
-
-  const mensagem = encodeURIComponent(
-    "Olá, vim pelo site da PL Paulino e gostaria de solicitar atendimento."
-  );
-
-  const whatsapp = `https://wa.me/${telefone}?text=${mensagem}`;
+export default function App() {
+  const whatsapp =
+    "https://wa.me/5511967036453?text=Olá,%20vim%20pelo%20site%20da%20PL%20Paulino%20e%20gostaria%20de%20solicitar%20atendimento.";
 
   const servicos = [
-  const solucoes = [
-    {
-      titulo: "Regularização CREA, CFT e CONFEA",
-      texto:
-        "Assessoria para registro, regularização, vistos, certidões e processos administrativos junto aos conselhos profissionais.",
-    },
-    {
-      titulo: "CREA, CFT e CONFEA",
-      titulo: "Registro de Obra e ART",
-      texto:
-        "Regularização de empresas e profissionais junto aos conselhos federais e estaduais, incluindo cadastros, vistos, certidões e processos administrativos.",
-        "Suporte para registro de obra, emissão, recuperação e baixa de ART, além de orientação documental para responsáveis técnicos.",
-    },
-    {
-      titulo: "ART e CAT",
-      titulo: "CAT e Acervo Técnico",
-      texto:
-        "Emissão, recuperação e baixa de ART, Certidão de Acervo Técnico, processo de cargo e função e baixa de responsável técnico.",
-        "Apoio em Certidão de Acervo Técnico, organização de documentos, comprovação técnica e processos relacionados.",
-    },
-    {
-      titulo: "Licitações",
-      titulo: "Licitações e Cadastro de Fornecedores",
-      texto:
-        "Organização documental para participação em licitações, cadastro de fornecedores, certidões e suporte administrativo para habilitação.",
-        "Organização documental, certidões, cadastros em órgãos públicos e privados e suporte para habilitação.",
-    },
-    {
-      titulo: "Gestão de Projetos",
-      titulo: "Registro Profissional",
-      texto:
-        "Gerenciamento de projetos, cronogramas, custos, riscos, qualidade, planejamento estratégico e controle financeiro.",
-        "Assessoria para profissionais que precisam de registro, regularização, vistos e documentação junto ao CREA ou CFT.",
-    },
-    {
-      titulo: "Projetos e Controle Financeiro",
-      texto:
-        "Planejamento, cronograma, custos, riscos, qualidade e controle financeiro de projetos.",
-    },
-  ];
-
-  const listaServicos = [
-  const servicos = [
-    "Registro e regularização de empresas",
-    "Registro e regularização de profissionais",
+    "Regularização CREA Nacional e CFT",
+    "Registro de empresa",
+    "Registro profissional",
     "Registro de obra",
-    "Visto para execução de obra",
-    "Visto para licitação",
-    "Anotação de Responsabilidade Técnica — ART",
-    "Recuperação e baixa de ART",
     "ART de obra ou serviço",
     "ART de cargo e função",
-    "Recuperação de ART",
-    "Baixa de ART",
     "CAT — Certidão de Acervo Técnico",
-    "Processo de cargo e função",
     "Baixa de responsável técnico",
     "Certidões diversas",
     "Cadastro de fornecedores",
-    "Documentação para licitações",
-    "Gerenciamento de cronograma",
+    "Documentação para licitação",
     "Controle financeiro de projetos",
-    "Planejamento estratégico de projetos",
-    "Planejamento e controle financeiro de projetos",
+  ];
+
+  const solucoes = [
+    {
+      titulo: "CREA Nacional e CFT",
+      texto:
+        "Assessoria administrativa para registros, regularizações, vistos, certidões e processos junto aos conselhos profissionais.",
+    },
+    {
+      titulo: "Registro de obra e ART",
+      texto:
+        "Suporte para registro de obra, ART de obra ou serviço, ART de cargo e função, recuperação e baixa de ART.",
+    },
+    {
+      titulo: "CAT e Acervo Técnico",
+      texto:
+        "Apoio documental para Certidão de Acervo Técnico, comprovação técnica e organização de documentação profissional.",
+    },
+    {
+      titulo: "Licitações e fornecedores",
+      texto:
+        "Organização de documentos, certidões e cadastros para participação em processos públicos e privados.",
+    },
   ];
 
   const etapas = [
     {
       numero: "01",
-      titulo: "Análise da demanda",
-      texto:
-        "Entendemos a necessidade da empresa, o tipo de processo, os prazos e os documentos envolvidos.",
-        "Identificamos a necessidade da empresa ou profissional, o órgão envolvido, o prazo e os documentos necessários.",
+      titulo: "Análise",
+      texto: "Entendemos a necessidade, o órgão envolvido, o prazo e os documentos necessários.",
     },
     {
       numero: "02",
-      titulo: "Organização documental",
-      texto:
-        "Conferimos documentos, identificamos pendências e estruturamos o processo para execução.",
-        "Conferimos documentos, apontamos pendências e estruturamos o processo para reduzir riscos e retrabalho.",
+      titulo: "Organização",
+      texto: "Conferimos documentos, identificamos pendências e estruturamos o procedimento.",
     },
     {
       numero: "03",
-      titulo: "Execução do processo",
-      titulo: "Execução do procedimento",
-      texto:
-        "Acompanhamos solicitações, cadastros, regularizações e processos junto aos órgãos responsáveis.",
-        "Realizamos o acompanhamento administrativo do processo, cadastros, solicitações e regularizações.",
+      titulo: "Execução",
+      texto: "Acompanhamos solicitações, cadastros, registros, emissões e regularizações.",
     },
     {
       numero: "04",
-      titulo: "Acompanhamento",
-      titulo: "Acompanhamento até conclusão",
-      texto:
-        "Mantemos suporte até a conclusão, com orientação e comunicação clara durante o andamento.",
-        "Mantemos suporte e orientação até a finalização da demanda, com comunicação objetiva.",
+      titulo: "Conclusão",
+      texto: "Mantemos comunicação objetiva até a finalização da demanda.",
     },
   ];
 
@@ -113,13 +69,11 @@ export default function () {
         :root {
           --azul-escuro: #061a33;
           --azul: #0f4c81;
-          --azul-medio: #1d6fa5;
           --dourado: #b8913b;
-          --dourado-claro: #d8bd73;
           --bege: #f4efe6;
           --bege-claro: #fbf8f2;
           --texto: #1f2933;
-          --texto-suave: #5b6573;
+          --suave: #5b6573;
           --linha: #e5ddcf;
           --branco: #ffffff;
         }
@@ -135,43 +89,31 @@ export default function () {
         body {
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
-          background: #07111f;
-          color: #ffffff;
-        }
-
-        .site {
-          min-height: 100vh;
-          background:
-            radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 35%),
-            linear-gradient(180deg, #07111f 0%, #0f172a 50%, #07111f 100%);
-          color: var(--texto);
           background: var(--bege-claro);
+          color: var(--texto);
         }
 
         .container {
-          width: min(1180px, 92%);
+          width: min(1320px, 90%);
           margin: 0 auto;
         }
 
-        .header {
-          background: rgba(2, 6, 23, 0.95);
         .topbar {
           background: var(--azul-escuro);
           color: #e9f2fb;
           font-size: 13px;
-          border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         .topbar-inner {
           display: flex;
           justify-content: space-between;
           gap: 16px;
-          padding: 10px 0;
           flex-wrap: wrap;
+          padding: 10px 0;
         }
 
         .topbar strong {
-          color: var(--dourado-claro);
+          color: #d8bd73;
         }
 
         header {
@@ -188,12 +130,9 @@ export default function () {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 18px 0;
           gap: 24px;
         }
 
-        .logo {
-          font-size: 24px;
         .brand {
           display: flex;
           align-items: center;
@@ -205,29 +144,22 @@ export default function () {
           height: 48px;
           border-radius: 14px;
           background: var(--azul-escuro);
-          color: var(--dourado-claro);
+          color: #d8bd73;
           display: grid;
           place-items: center;
           font-weight: 900;
-          letter-spacing: 1px;
-          font-size: 18px;
-          box-shadow: 0 12px 28px rgba(6, 26, 51, 0.2);
         }
 
-        .logo span {
-          color: #38bdf8;
         .brand-title strong {
           display: block;
           color: var(--azul-escuro);
           font-size: 23px;
-          letter-spacing: 0.3px;
         }
 
-        .menu {
         .brand-title span {
           display: block;
           margin-top: 4px;
-          color: var(--texto-suave);
+          color: var(--suave);
           font-size: 11px;
           font-weight: 800;
           text-transform: uppercase;
@@ -236,50 +168,34 @@ export default function () {
 
         nav {
           display: flex;
-          gap: 24px;
           gap: 26px;
           align-items: center;
         }
 
-        .menu a {
-          color: #cbd5e1;
         nav a {
           color: var(--texto);
           text-decoration: none;
-          font-size: 15px;
           font-size: 14px;
           font-weight: 800;
         }
 
-        .menu a:hover {
-          color: #38bdf8;
         nav a:hover {
           color: var(--azul);
         }
 
         .btn {
-          display: inline-block;
-          background: #0284c7;
-          color: white;
-          padding: 14px 22px;
-          border-radius: 12px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
           text-decoration: none;
-          font-weight: 700;
-          border: none;
           padding: 14px 22px;
           border-radius: 999px;
           font-size: 14px;
           font-weight: 900;
           border: 1px solid transparent;
           transition: 0.2s ease;
-          cursor: pointer;
         }
 
-        .btn:hover {
-          background: #0369a1;
         .btn-primary {
           background: var(--azul);
           color: white;
@@ -288,72 +204,39 @@ export default function () {
 
         .btn-primary:hover {
           background: var(--azul-escuro);
-          transform: translateY(-1px);
         }
 
-        .btn-outline {
         .btn-secondary {
           background: transparent;
-          border: 1px solid rgba(255,255,255,0.25);
-          color: var(--azul-escuro);
-          border-color: var(--linha);
+          color: white;
+          border-color: rgba(255,255,255,0.35);
         }
 
-        .btn-outline:hover {
-          border-color: #38bdf8;
-          background: rgba(56,189,248,0.08);
         .btn-secondary:hover {
-          border-color: var(--dourado);
-          color: var(--azul);
+          border-color: #d8bd73;
+          color: #d8bd73;
         }
 
         .hero {
-          padding: 90px 0 70px;
-          background:
-            linear-gradient(120deg, rgba(6,26,51,0.96), rgba(15,76,129,0.9)),
-            linear-gradient(180deg, var(--azul-escuro), var(--azul));
+          background: linear-gradient(120deg, var(--azul-escuro), var(--azul));
           color: white;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .hero::after {
-          content: "";
-          position: absolute;
-          right: -170px;
-          top: -120px;
-          width: 520px;
-          height: 520px;
-          border-radius: 50%;
-          border: 1px solid rgba(216, 189, 115, 0.25);
-          background: rgba(216, 189, 115, 0.06);
         }
 
         .hero-grid {
-          position: relative;
-          z-index: 1;
-          min-height: 700px;
+          min-height: 680px;
           display: grid;
-          grid-template-columns: 1.15fr 0.85fr;
-          gap: 50px;
           grid-template-columns: 1.08fr 0.92fr;
           gap: 64px;
           align-items: center;
           padding: 90px 0;
         }
 
-        .tag {
-          color: #38bdf8;
         .eyebrow {
           display: inline-flex;
           align-items: center;
           gap: 12px;
-          color: var(--dourado-claro);
+          color: #d8bd73;
           text-transform: uppercase;
-          letter-spacing: 3px;
-          font-size: 13px;
-          font-weight: 700;
-          margin-bottom: 18px;
           letter-spacing: 2.6px;
           font-size: 12px;
           font-weight: 900;
@@ -364,71 +247,37 @@ export default function () {
           content: "";
           width: 34px;
           height: 1px;
-          background: var(--dourado-claro);
+          background: #d8bd73;
         }
 
         h1 {
-          font-size: clamp(38px, 6vw, 66px);
-          line-height: 1.04;
-          margin: 0 0 24px;
           margin: 0 0 26px;
-          font-size: clamp(40px, 5.7vw, 72px);
+          font-size: clamp(40px, 5.5vw, 70px);
           line-height: 1;
           letter-spacing: -2px;
           max-width: 850px;
         }
 
         .hero p {
-          color: #cbd5e1;
           color: #e5edf5;
           max-width: 760px;
           font-size: 19px;
-          line-height: 1.7;
-          margin-bottom: 32px;
           line-height: 1.78;
           margin: 0 0 34px;
         }
 
-        .actions {
         .hero-actions {
           display: flex;
           gap: 14px;
           flex-wrap: wrap;
-          margin-bottom: 38px;
-        }
-
-        .hero-actions .btn-secondary {
-          color: white;
-          border-color: rgba(255,255,255,0.25);
-        }
-
-        .hero-actions .btn-secondary:hover {
-          border-color: var(--dourado-claro);
-          color: var(--dourado-claro);
-        }
-
-        .price-note {
-          display: inline-flex;
-          align-items: center;
-          gap: 12px;
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(216,189,115,0.35);
-          padding: 14px 18px;
-          border-radius: 999px;
-          color: #f8eed0;
-          font-weight: 800;
         }
 
         .hero-card {
-          background: rgba(15, 23, 42, 0.86);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 28px;
           background: var(--bege-claro);
           color: var(--texto);
-          border-radius: 32px;
+          border-radius: 28px;
           padding: 34px;
-          box-shadow: 0 25px 70px rgba(0,0,0,0.35);
-          box-shadow: 0 32px 80px rgba(0,0,0,0.28);
+          box-shadow: 0 32px 80px rgba(0,0,0,0.25);
           border: 1px solid rgba(216, 189, 115, 0.3);
         }
 
@@ -443,38 +292,25 @@ export default function () {
         }
 
         .hero-card h3 {
-          margin-top: 0;
-          font-size: 25px;
           color: var(--azul-escuro);
           font-size: 28px;
           line-height: 1.18;
           margin: 0 0 22px;
         }
 
-        .check {
-          padding: 14px 0;
-          border-bottom: 1px solid rgba(255,255,255,0.08);
-          color: #e2e8f0;
         .hero-item {
           padding: 17px 0;
           border-top: 1px solid var(--linha);
         }
 
-        .check:last-child {
-          border-bottom: none;
         .hero-item strong {
           display: block;
           color: var(--azul-escuro);
           margin-bottom: 5px;
         }
 
-        .check::before {
-          content: "✓";
-          color: #38bdf8;
-          font-weight: bold;
-          margin-right: 10px;
         .hero-item span {
-          color: var(--texto-suave);
+          color: var(--suave);
           line-height: 1.5;
           font-size: 14px;
         }
@@ -514,33 +350,26 @@ export default function () {
         }
 
         .strip-item span {
-          color: var(--texto-suave);
+          color: var(--suave);
           line-height: 1.5;
           font-size: 14px;
         }
 
         section {
-          padding: 78px 0;
           padding: 88px 0;
         }
 
-        .section-title {
-          max-width: 780px;
-          margin-bottom: 42px;
         .section-head {
           max-width: 830px;
           margin-bottom: 48px;
         }
 
-        .section-title.center {
         .section-head.center {
           text-align: center;
           margin-left: auto;
           margin-right: auto;
         }
 
-        .section-title h2 {
-          font-size: clamp(30px, 4vw, 46px);
         .kicker {
           color: var(--dourado);
           text-transform: uppercase;
@@ -558,57 +387,41 @@ export default function () {
           letter-spacing: -1.1px;
         }
 
-        .section-title p {
-          color: #cbd5e1;
-          font-size: 17px;
-          line-height: 1.7;
-        .section-head p {
-          color: var(--texto-suave);
+        .section-head p,
+        .about-copy p {
+          color: var(--suave);
           font-size: 18px;
           line-height: 1.76;
           margin: 0;
         }
 
         .about {
-          background: rgba(2, 6, 23, 0.58);
           background: var(--bege-claro);
         }
 
         .about-grid {
           display: grid;
           grid-template-columns: 0.9fr 1.1fr;
-          gap: 44px;
           gap: 58px;
           align-items: center;
         }
 
-        .about-box {
-          background: linear-gradient(135deg, #0369a1, #0f172a);
-          border-radius: 30px;
-          padding: 36px;
-          min-height: 330px;
         .about-card {
           background: var(--azul-escuro);
           color: white;
-          border-radius: 34px;
+          border-radius: 30px;
           padding: 40px;
-          min-height: 430px;
+          min-height: 380px;
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
           justify-content: space-between;
-          box-shadow: 0 26px 70px rgba(6,26,51,0.18);
         }
 
-        .about-box h2 {
-          font-size: 40px;
-          margin: 0 0 14px;
         .about-card h3 {
           color: white;
           margin: 0;
           font-size: 36px;
           line-height: 1.12;
-          letter-spacing: -0.8px;
         }
 
         .about-card p {
@@ -617,54 +430,24 @@ export default function () {
           font-size: 17px;
         }
 
-        .about-text p {
-          color: #dbeafe;
-          line-height: 1.85;
-        .about-copy p {
-          color: var(--texto-suave);
-          font-size: 17px;
-          line-height: 1.86;
-        }
-
-        .grid {
         .solutions {
           background: white;
         }
 
         .solutions-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 22px;
         }
 
-        .card {
-          background: rgba(15, 23, 42, 0.76);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 24px;
-          padding: 28px;
         .solution-card {
           background: white;
           border: 1px solid var(--linha);
-          border-radius: 26px;
+          border-radius: 22px;
           padding: 30px;
-          min-height: 270px;
           box-shadow: 0 16px 42px rgba(31,41,51,0.05);
-          transition: 0.22s ease;
         }
 
-        .card h3 {
-          color: #38bdf8;
-          font-size: 21px;
-          margin-top: 0;
-        .solution-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 26px 60px rgba(31,41,51,0.1);
-        }
-
-        .card p {
-          color: #cbd5e1;
-          line-height: 1.65;
         .solution-card small {
           display: block;
           color: var(--dourado);
@@ -673,7 +456,6 @@ export default function () {
           margin-bottom: 22px;
         }
 
-        .service-list {
         .solution-card h3 {
           color: var(--azul-escuro);
           font-size: 22px;
@@ -682,7 +464,7 @@ export default function () {
         }
 
         .solution-card p {
-          color: var(--texto-suave);
+          color: var(--suave);
           line-height: 1.68;
           margin: 0;
         }
@@ -693,8 +475,6 @@ export default function () {
 
         .detail-layout {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 14px;
           grid-template-columns: 0.88fr 1.12fr;
           gap: 52px;
           align-items: start;
@@ -703,10 +483,8 @@ export default function () {
         .detail-aside {
           background: var(--azul-escuro);
           color: white;
-          border-radius: 30px;
+          border-radius: 28px;
           padding: 36px;
-          position: sticky;
-          top: 112px;
         }
 
         .detail-aside h3 {
@@ -721,9 +499,6 @@ export default function () {
           margin-bottom: 22px;
         }
 
-        .service-item {
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.08);
         .detail-list {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -735,24 +510,18 @@ export default function () {
           border: 1px solid var(--linha);
           border-radius: 14px;
           padding: 16px;
-          color: #e2e8f0;
           color: var(--texto);
           font-weight: 800;
           line-height: 1.4;
         }
 
-        .service-item::before {
-          content: "•";
-          color: #38bdf8;
         .detail-item::before {
           content: "✓";
           color: var(--dourado);
           margin-right: 9px;
           font-weight: 900;
-          margin-right: 10px;
         }
 
-        .steps {
         .process {
           background: white;
         }
@@ -763,21 +532,13 @@ export default function () {
           gap: 22px;
         }
 
-        .step {
-          background: #020617;
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 24px;
         .process-card {
           background: var(--bege-claro);
           border: 1px solid var(--linha);
-          border-radius: 26px;
+          border-radius: 22px;
           padding: 28px;
         }
 
-        .number {
-          color: #38bdf8;
-          font-size: 30px;
-          font-weight: 900;
         .process-card strong {
           color: var(--dourado);
           display: block;
@@ -791,81 +552,28 @@ export default function () {
           font-size: 21px;
         }
 
-        .step p {
-          color: #cbd5e1;
         .process-card p {
-          color: var(--texto-suave);
+          color: var(--suave);
           line-height: 1.65;
           margin: 0;
         }
 
-        .price-section {
-          background: var(--bege-claro);
-        }
-
-        .price-box {
-          background: white;
-          border: 1px solid var(--linha);
-          border-radius: 30px;
-          padding: 42px;
-          display: grid;
-          grid-template-columns: 1fr 0.9fr;
-          gap: 36px;
-          align-items: center;
-          box-shadow: 0 20px 50px rgba(31,41,51,0.06);
-        }
-
-        .price-value {
-          background: var(--azul-escuro);
-          color: white;
-          border-radius: 24px;
-          padding: 30px;
-        }
-
-        .price-value small {
-          color: var(--dourado-claro);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          font-weight: 900;
-        }
-
-        .price-value strong {
-          display: block;
-          font-size: 42px;
-          margin: 10px 0;
-        }
-
-        .price-value span {
-          color: #dce8f3;
-          line-height: 1.6;
-        }
-
         .cta {
-          background: linear-gradient(135deg, #0284c7, #0f172a);
-          background:
-            linear-gradient(120deg, rgba(6,26,51,0.96), rgba(15,76,129,0.92));
+          background: linear-gradient(120deg, var(--azul-escuro), var(--azul));
           color: white;
-          border-radius: 34px;
-          padding: 48px;
+          border-radius: 30px;
           padding: 50px;
           display: grid;
-          grid-template-columns: 1.2fr 0.8fr;
-          gap: 30px;
           grid-template-columns: 1.08fr 0.92fr;
           gap: 34px;
           align-items: center;
-          box-shadow: 0 28px 75px rgba(6,26,51,0.2);
         }
 
         .cta h2 {
-          font-size: clamp(30px, 4vw, 44px);
-          margin: 0 0 16px;
           color: white;
         }
 
         .cta p {
-          color: #e0f2fe;
-          line-height: 1.7;
           color: #dce8f3;
           font-size: 17px;
           line-height: 1.74;
@@ -878,31 +586,20 @@ export default function () {
           flex-wrap: wrap;
         }
 
-        .cta .btn-secondary {
-          color: white;
-          border-color: rgba(255,255,255,0.25);
-        }
-
         .contact {
           background: white;
         }
 
         .contact-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
           grid-template-columns: 0.92fr 1.08fr;
           gap: 28px;
         }
 
-        .contact-box {
-          background: rgba(15, 23, 42, 0.76);
-          border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 24px;
-          padding: 30px;
         .contact-card {
           background: white;
           border: 1px solid var(--linha);
-          border-radius: 28px;
+          border-radius: 26px;
           padding: 32px;
           box-shadow: 0 16px 42px rgba(31,41,51,0.05);
         }
@@ -922,10 +619,8 @@ export default function () {
           color: white;
         }
 
-        .contact-box p {
-          color: #cbd5e1;
         .contact-card p {
-          color: var(--texto-suave);
+          color: var(--suave);
           line-height: 1.7;
         }
 
@@ -934,8 +629,6 @@ export default function () {
         }
 
         .info {
-          background: rgba(255,255,255,0.05);
-          padding: 16px;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.14);
           color: #eef6ff;
@@ -957,25 +650,15 @@ export default function () {
           background: var(--bege-claro);
           padding: 15px;
           border-radius: 12px;
-          border: 1px solid rgba(255,255,255,0.14);
-          background: #020617;
-          color: white;
           font-size: 15px;
           outline: none;
           color: var(--texto);
         }
 
         textarea {
-          min-height: 130px;
           grid-column: 1 / -1;
           min-height: 140px;
           resize: vertical;
-        }
-
-        input:focus,
-        textarea:focus {
-          border-color: var(--azul);
-          box-shadow: 0 0 0 4px rgba(15,76,129,0.1);
         }
 
         .form-footer {
@@ -987,8 +670,7 @@ export default function () {
         }
 
         .note {
-          color: #94a3b8;
-          color: var(--texto-suave);
+          color: var(--suave);
           font-size: 13px;
           line-height: 1.5;
           max-width: 420px;
@@ -996,24 +678,11 @@ export default function () {
         }
 
         footer {
-          border-top: 1px solid rgba(255,255,255,0.08);
-          padding: 28px 0;
-          color: #94a3b8;
-          text-align: center;
           background: var(--azul-escuro);
           color: #dce8f3;
           padding: 40px 0;
         }
 
-        .footer-grid {
-          display: flex;
-          justify-content: space-between;
-          gap: 22px;
-          flex-wrap: wrap;
-        }
-
-        @media (max-width: 980px) {
-          .hero,
         footer strong {
           color: white;
         }
@@ -1028,27 +697,17 @@ export default function () {
           .hero-grid,
           .about-grid,
           .detail-layout,
-          .price-box,
           .cta,
           .contact-grid {
             grid-template-columns: 1fr;
           }
 
-          .grid,
-          .steps {
           .solutions-grid,
           .process-grid,
           .strip-grid {
             grid-template-columns: repeat(2, 1fr);
           }
 
-          .service-list {
-            grid-template-columns: repeat(2, 1fr);
-          .detail-aside {
-            position: static;
-          }
-
-          .menu {
           nav {
             display: none;
           }
@@ -1058,10 +717,6 @@ export default function () {
           }
         }
 
-        @media (max-width: 640px) {
-          .grid,
-          .steps,
-          .service-list {
         @media (max-width: 680px) {
           .hero-grid {
             min-height: auto;
@@ -1076,32 +731,25 @@ export default function () {
             grid-template-columns: 1fr;
           }
 
-          .hero {
-            padding-top: 60px;
           .hero-card,
           .about-card,
           .detail-aside,
-          .price-box,
-          .price-value,
           .cta,
           .contact-card {
             padding: 26px;
-            border-radius: 24px;
+            border-radius: 22px;
           }
 
           h1 {
             font-size: 40px;
           }
 
-          .cta {
-            padding: 30px;
           h2 {
             font-size: 32px;
           }
         }
       `}</style>
 
-      <header className="header">
       <div className="topbar">
         <div className="container topbar-inner">
           <div>
@@ -1113,8 +761,6 @@ export default function () {
 
       <header>
         <div className="container nav">
-          <div className="logo">
-            PL <span>PAULINO</span>
           <div className="brand">
             <div className="brand-mark">PL</div>
             <div className="brand-title">
@@ -1123,18 +769,13 @@ export default function () {
             </div>
           </div>
 
-          <nav className="menu">
           <nav>
             <a href="#inicio">Início</a>
             <a href="#sobre">Quem somos</a>
             <a href="#servicos">Serviços</a>
-            <a href="#processo">Como funciona</a>
-            <a href="#precos">Valores</a>
             <a href="#contato">Contato</a>
           </nav>
 
-          <a className="btn" href={whatsapp} target="_blank" rel="noreferrer">
-            WhatsApp
           <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noreferrer">
             Solicitar atendimento
           </a>
@@ -1142,27 +783,15 @@ export default function () {
       </header>
 
       <main>
-        <section id="inicio" className="container hero">
-          <div>
-            <div className="tag">Consultoria administrativa e documental</div>
         <section id="inicio" className="hero">
           <div className="container hero-grid">
             <div>
               <div className="eyebrow">Assessoria administrativa especializada</div>
 
-            <h1>
-              Soluções em documentação técnica, CREA, CFT, licitações e gestão
-              de projetos.
-            </h1>
               <h1>
                 Regularização em CREA, CFT, obras e documentação técnica com segurança.
               </h1>
 
-            <p>
-              A PL Paulino apoia empresas na regularização documental, cadastro
-              de fornecedores, participação em licitações, processos junto aos
-              conselhos profissionais e controle estratégico de projetos.
-            </p>
               <p>
                 A PL Paulino apoia empresas, profissionais e prestadores de serviços técnicos
                 em processos administrativos junto ao CREA, CFT e CONFEA, incluindo registro
@@ -1170,10 +799,6 @@ export default function () {
                 licitações e cadastro de fornecedores.
               </p>
 
-            <div className="actions">
-              <a className="btn" href={whatsapp} target="_blank" rel="noreferrer">
-                Falar com especialista
-              </a>
               <div className="hero-actions">
                 <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noreferrer">
                   Falar com especialista
@@ -1182,23 +807,8 @@ export default function () {
                   Ver serviços
                 </a>
               </div>
-
-              <a className="btn btn-outline" href="#servicos">
-                Ver serviços
-              </a>
-              <div className="price-note">
-                Procedimentos a partir de R$ 150,00
-              </div>
             </div>
-          </div>
 
-          <div className="hero-card">
-            <h3>Atendimento para empresas que precisam de segurança documental</h3>
-            <div className="check">CREA, CFT e CONFEA</div>
-            <div className="check">ART, CAT e responsável técnico</div>
-            <div className="check">Licitações e cadastro de fornecedores</div>
-            <div className="check">Certidões e regularização</div>
-            <div className="check">Planejamento e controle financeiro</div>
             <div className="hero-card">
               <small>Atendimento para empresas e profissionais</small>
               <h3>Suporte documental para quem precisa regularizar, comprovar e participar de processos.</h3>
@@ -1247,40 +857,28 @@ export default function () {
             </div>
 
             <div className="strip-item">
-              <small>Valor inicial</small>
-              <strong>A partir de R$ 150,00</strong>
-              <span>Valores variam conforme procedimento, órgão, prazo e complexidade.</span>
+              <small>Processo</small>
+              <strong>Organizado</strong>
+              <span>Atendimento com análise, documentação, execução e acompanhamento.</span>
             </div>
           </div>
         </div>
 
         <section id="sobre" className="about">
           <div className="container about-grid">
-            <div className="about-box">
-              <div className="tag">PL Paulino</div>
-              <h2>Consultoria técnica com atuação nacional.</h2>
             <div className="about-card">
               <h3>Assessoria para empresas que precisam de regularidade documental.</h3>
               <p>
-                Organização, confidencialidade e suporte especializado para
-                empresas e profissionais.
                 Atuamos com organização, clareza e acompanhamento em processos administrativos
                 que exigem atenção técnica, documentação correta e comunicação objetiva.
               </p>
             </div>
 
-            <div className="about-text">
-              <div className="section-title">
-                <h2>Quem somos</h2>
             <div className="about-copy">
               <div className="section-head">
                 <div className="kicker">Quem somos</div>
                 <h2>Consultoria administrativa para CREA, CFT, obras, registros e licitações.</h2>
                 <p>
-                  Somos uma empresa especializada em documentação junto aos
-                  conselhos federais e estaduais, documentação para licitações,
-                  cadastro de fornecedores, certidões diversas, gerenciamento de
-                  projetos e planejamento financeiro.
                   Somos uma empresa especializada em documentação junto aos conselhos federais
                   e estaduais, documentação para licitação, cadastro de fornecedores,
                   certidões diversas, gerenciamento de projetos, qualidade e planejamento
@@ -1289,9 +887,6 @@ export default function () {
               </div>
 
               <p>
-                Atuamos com confidencialidade e foco em soluções administrativas
-                para empresas que precisam de regularidade, segurança e suporte
-                em processos técnicos e documentais.
                 Nosso trabalho é apoiar empresas e profissionais na condução de procedimentos
                 documentais, reduzindo dúvidas, pendências e retrabalho. Atuamos com
                 confidencialidade e atendimento em todo o território nacional.
@@ -1300,35 +895,6 @@ export default function () {
           </div>
         </section>
 
-        <section id="servicos" className="container">
-          <div className="section-title center">
-            <div className="tag">Serviços</div>
-            <h2>Soluções para documentação, licitações e projetos.</h2>
-            <p>
-              Serviços estruturados para empresas que precisam regularizar,
-              organizar e acompanhar demandas administrativas e técnicas.
-            </p>
-          </div>
-
-          <div className="grid">
-            {servicos.map((servico) => (
-              <div className="card" key={servico.titulo}>
-                <h3>{servico.titulo}</h3>
-                <p>{servico.texto}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="container">
-          <div className="section-title">
-            <div className="tag">Atuação detalhada</div>
-            <h2>Serviços profissionais e empresariais</h2>
-            <p>
-              A PL Paulino atua em demandas específicas de regularização,
-              documentação, cadastros e suporte para empresas.
-            </p>
-          </div>
         <section id="servicos" className="solutions">
           <div className="container">
             <div className="section-head center">
@@ -1340,12 +906,6 @@ export default function () {
               </p>
             </div>
 
-          <div className="service-list">
-            {listaServicos.map((item) => (
-              <div className="service-item" key={item}>
-                {item}
-              </div>
-            ))}
             <div className="solutions-grid">
               {solucoes.map((item, index) => (
                 <div className="solution-card" key={item.titulo}>
@@ -1358,15 +918,6 @@ export default function () {
           </div>
         </section>
 
-        <section id="processo" className="container">
-          <div className="section-title center">
-            <div className="tag">Como funciona</div>
-            <h2>Processo claro do início ao fim</h2>
-            <p>
-              Estruturamos cada demanda com análise, organização, execução e
-              acompanhamento.
-            </p>
-          </div>
         <section className="services-detail">
           <div className="container detail-layout">
             <div className="detail-aside">
@@ -1381,14 +932,6 @@ export default function () {
               </a>
             </div>
 
-          <div className="steps">
-            {etapas.map((etapa) => (
-              <div className="step" key={etapa.numero}>
-                <div className="number">{etapa.numero}</div>
-                <h3>{etapa.titulo}</h3>
-                <p>{etapa.texto}</p>
-              </div>
-            ))}
             <div className="detail-list">
               {servicos.map((item) => (
                 <div className="detail-item" key={item}>
@@ -1399,27 +942,17 @@ export default function () {
           </div>
         </section>
 
-        <section className="container">
-          <div className="cta">
-            <div>
-              <h2>Precisa regularizar sua empresa ou preparar documentação?</h2>
         <section className="process">
           <div className="container">
             <div className="section-head center">
               <div className="kicker">Como funciona</div>
               <h2>Processo simples, organizado e acompanhado.</h2>
               <p>
-                Fale com a PL Paulino para uma análise inicial da sua demanda e
-                receba orientação sobre o melhor caminho.
                 O atendimento é estruturado para facilitar a leitura da demanda,
                 organizar documentos e conduzir o procedimento com previsibilidade.
               </p>
             </div>
 
-            <div>
-              <a className="btn" href={whatsapp} target="_blank" rel="noreferrer">
-                Solicitar atendimento
-              </a>
             <div className="process-grid">
               {etapas.map((etapa) => (
                 <div className="process-card" key={etapa.numero}>
@@ -1432,54 +965,6 @@ export default function () {
           </div>
         </section>
 
-        <section id="contato" className="container">
-          <div className="section-title center">
-            <div className="tag">Contato</div>
-            <h2>Fale com a PL Paulino</h2>
-            <p>
-              Atendimento nacional para empresas que precisam de suporte
-              documental, administrativo e técnico.
-            </p>
-          </div>
-
-          <div className="contact-grid">
-            <div className="contact-box">
-              <h3>Informações</h3>
-              <p>
-                Entre em contato para explicar sua necessidade. Nossa equipe
-                retornará com orientação para o processo.
-              </p>
-
-              <div className="info">
-                <strong>WhatsApp:</strong> (11) 96703-6453
-        <section id="precos" className="price-section">
-          <div className="container">
-            <div className="price-box">
-              <div>
-                <div className="kicker">Valores</div>
-                <h2>Procedimentos a partir de R$ 150,00.</h2>
-                <p>
-                  O valor final depende do tipo de procedimento, conselho ou órgão envolvido,
-                  prazo, documentação disponível e complexidade da demanda.
-                </p>
-              </div>
-
-              <div className="info">
-                <strong>E-mail:</strong> contato@plpaulino.com.br
-              <div className="price-value">
-                <small>Valor inicial</small>
-                <strong>R$ 150,00</strong>
-                <span>
-                  Solicite uma análise para identificar o procedimento correto e o valor
-                  aplicável à sua necessidade.
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-              <div className="info">
-                <strong>Atendimento:</strong> Todo o território nacional
         <section>
           <div className="container">
             <div className="cta">
@@ -1491,8 +976,6 @@ export default function () {
                 </p>
               </div>
 
-              <div className="info">
-                <strong>Site:</strong> www.plpaulino.com.br
               <div className="cta-actions">
                 <a className="btn btn-primary" href={whatsapp} target="_blank" rel="noreferrer">
                   Falar pelo WhatsApp
@@ -1505,8 +988,6 @@ export default function () {
           </div>
         </section>
 
-            <div className="contact-box">
-              <h3>Solicite uma análise</h3>
         <section id="contato" className="contact">
           <div className="container">
             <div className="section-head center">
@@ -1518,12 +999,6 @@ export default function () {
               </p>
             </div>
 
-              <form>
-                <input type="text" placeholder="Nome" />
-                <input type="email" placeholder="E-mail" />
-                <input type="text" placeholder="Empresa" />
-                <input type="text" placeholder="Telefone / WhatsApp" />
-                <textarea placeholder="Descreva sua necessidade" />
             <div className="contact-grid">
               <div className="contact-card dark">
                 <h3>Dados de contato</h3>
@@ -1531,18 +1006,10 @@ export default function () {
                   Atendimento nacional para demandas administrativas, documentais e técnicas.
                 </p>
 
-                <a className="btn" href={whatsapp} target="_blank" rel="noreferrer">
-                  Enviar pelo WhatsApp
-                </a>
-              </form>
                 <div className="info">
                   <strong>WhatsApp:</strong> (11) 96703-6453
                 </div>
 
-              <p className="note">
-                Em uma próxima etapa, este formulário poderá ser integrado com
-                n8n, e-mail, CRM ou banco de dados.
-              </p>
                 <div className="info">
                   <strong>E-mail:</strong> contato@plpaulino.com.br
                 </div>
@@ -1589,16 +1056,13 @@ export default function () {
 
       <footer>
         <div className="container">
-          © 2026 PL Paulino — Consultoria Administrativa e Documental.
-        <div className="container footer-grid">
-          <div>
-            <strong>PL Paulino — Assessoria Administrativa</strong>
-            <p>
-              Consultoria em CREA, CFT, registro de obra, documentação técnica,
-              licitações, cadastros, projetos e controle financeiro.
-            </p>
-          </div>
+          <strong>PL Paulino — Assessoria Administrativa</strong>
+          <p>
+            Consultoria em CREA, CFT, registro de obra, documentação técnica,
+            licitações, cadastros, projetos e controle financeiro.
+          </p>
         </div>
       </footer>
     </div>
   );
+}
