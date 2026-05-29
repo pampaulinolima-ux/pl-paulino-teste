@@ -1,63 +1,49 @@
 export default function App() {
   const whatsapp = "https://wa.me/5511967036453";
 
-  const services = [
-    "Regularização CREA Nacional e CFT",
-    "Registro de empresa e profissional",
-    "Registro de obra e ART",
-    "CAT e acervo técnico",
-    "Licitações e cadastro de fornecedores",
-    "Certidões e documentação técnica",
-  ];
-
   return (
     <div>
       <style>{`
-        *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f7f3ea;color:#172033}
-        .container{width:min(1480px,96%);margin:auto}
-        header{background:#fff;border-bottom:1px solid #e2d8c7;position:sticky;top:0;z-index:10}
-        .nav{height:82px;display:flex;justify-content:space-between;align-items:center}
-        .logo{font-size:26px;font-weight:900;color:#082544}.logo span{color:#b9974f}
-        nav{display:flex;gap:32px} nav a{text-decoration:none;color:#172033;font-weight:700}
-        .btn{background:#082544;color:#fff;padding:14px 24px;border-radius:4px;text-decoration:none;font-weight:800}
-        .hero{background:#082544;color:white;padding:110px 0}
-        .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
-        h1{font-size:68px;line-height:1;margin:0 0 28px;letter-spacing:-2px}
-        .lead{font-size:20px;line-height:1.8;color:#dbe7f2;max-width:850px}
-        .panel{background:#f7f3ea;color:#172033;padding:42px;border-radius:2px;border-top:6px solid #b9974f}
-        .panel h3{font-size:30px;color:#082544;margin-top:0}
-        .panel p{line-height:1.7;color:#53606f}
-        section{padding:90px 0}
-        .title{max-width:850px;margin-bottom:45px}
-        .kicker{color:#b9974f;text-transform:uppercase;letter-spacing:2px;font-weight:900;font-size:13px}
-        h2{font-size:48px;color:#082544;margin:12px 0;line-height:1.08}
-        .text{font-size:18px;line-height:1.8;color:#53606f}
+        *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fbf8f2;color:#1f2933}
+        .container{width:min(1450px,96%);margin:auto}
+        header{background:#fbf8f2;border-bottom:1px solid #e5ddcf;position:sticky;top:0;z-index:10}
+        .nav{height:78px;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-weight:900;font-size:25px;color:#061a33}.logo span{color:#b8913b}
+        nav{display:flex;gap:26px}nav a{text-decoration:none;color:#1f2933;font-weight:800}
+        .btn{display:inline-block;background:#0f4c81;color:#fff;text-decoration:none;padding:14px 24px;border-radius:999px;font-weight:900}
+        .hero{padding:95px 0;background:linear-gradient(135deg,#f4efe6,#fff)}
+        .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .tag{color:#b8913b;text-transform:uppercase;letter-spacing:2px;font-weight:900;font-size:13px}
+        h1{font-size:62px;line-height:1.02;color:#061a33;margin:16px 0 24px}
+        p{line-height:1.75;color:#5b6573;font-size:17px}
+        .card-blue{background:#061a33;color:white;padding:42px;border-radius:28px}
+        .card-blue h3{font-size:30px;margin-top:0;color:white}.card-blue p{color:#dce8f3}
+        section{padding:80px 0}
+        .center{text-align:center;max-width:850px;margin:0 auto 45px}
+        h2{font-size:46px;color:#061a33;margin:12px 0}
         .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-        .card{background:#fff;border:1px solid #e2d8c7;padding:32px;min-height:190px}
-        .card h3{color:#082544;font-size:22px;margin-top:0}
-        .card p{color:#53606f;line-height:1.7}
-        .dark{background:#082544;color:#fff}
-        .dark h2,.dark h3{color:#fff}.dark .text{color:#dbe7f2}
-        .process{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-        .step{background:#fff;padding:30px;border:1px solid #e2d8c7}
-        .step strong{color:#b9974f;font-size:32px}
-        .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
-        input,textarea{width:100%;padding:15px;margin-bottom:12px;border:1px solid #d8cab5;background:#fff;font-size:15px}
+        .card{background:white;border:1px solid #e5ddcf;border-radius:22px;padding:30px;box-shadow:0 14px 36px rgba(31,41,51,.05)}
+        .card h3{color:#061a33;font-size:22px;margin-top:0}
+        .list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        .item{background:white;border:1px solid #e5ddcf;padding:16px;border-radius:14px;font-weight:800}
+        .item:before{content:"✓";color:#b8913b;margin-right:8px}
+        .beige{background:#f4efe6}
+        .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px}
+        input,textarea{width:100%;padding:15px;border:1px solid #e5ddcf;margin-bottom:12px;border-radius:12px}
         textarea{min-height:130px}
-        footer{background:#061a33;color:#dbe7f2;padding:36px 0}
-        @media(max-width:900px){.hero-grid,.grid,.process,.contact{grid-template-columns:1fr}nav{display:none}h1{font-size:42px}}
+        footer{background:#061a33;color:white;padding:34px 0}
+        @media(max-width:900px){.hero-grid,.grid,.list,.contact{grid-template-columns:1fr}nav{display:none}h1{font-size:40px}}
       `}</style>
 
       <header>
         <div className="container nav">
           <div className="logo">PL <span>PAULINO</span></div>
           <nav>
-            <a href="#sobre">Quem somos</a>
             <a href="#servicos">Serviços</a>
-            <a href="#processo">Processo</a>
+            <a href="#como">Como funciona</a>
             <a href="#contato">Contato</a>
           </nav>
-          <a className="btn" href={whatsapp}>Fale conosco</a>
+          <a className="btn" href={whatsapp}>WhatsApp</a>
         </div>
       </header>
 
@@ -65,82 +51,106 @@ export default function App() {
         <section className="hero">
           <div className="container hero-grid">
             <div>
-              <div className="kicker">Assessoria administrativa especializada</div>
-              <h1>Regularização empresarial, CREA, CFT e documentação técnica.</h1>
-              <p className="lead">
-                A PL Paulino apoia empresas, profissionais e prestadores de serviços técnicos
-                em registros, obras, ART, CAT, certidões, licitações e cadastros, com atuação
-                nacional e acompanhamento organizado.
+              <div className="tag">CREA • CFT • Obras • ART • CAT</div>
+              <h1>Assessoria administrativa para regularizar sua documentação técnica.</h1>
+              <p>
+                Atendimento para empresas e profissionais que precisam de suporte em CREA Nacional,
+                CFT, registro de obra, registro profissional, ART, CAT, licitações, certidões e
+                cadastro de fornecedores.
               </p>
-              <a className="btn" href={whatsapp}>Solicitar atendimento</a>
+              <a className="btn" href={whatsapp}>Falar com especialista</a>
             </div>
-            <div className="panel">
-              <h3>Para quem é indicado?</h3>
-              <p>Empresas de engenharia, construção, manutenção, serviços técnicos, fornecedores, profissionais e organizações que precisam regularizar documentação junto ao CREA, CFT e órgãos relacionados.</p>
+            <div className="card-blue">
+              <h3>O que a PL Paulino resolve?</h3>
+              <p>Organizamos e acompanhamos processos documentais para reduzir dúvidas, pendências e retrabalho.</p>
+              <p>Atendimento nacional para empresas, profissionais técnicos e prestadores de serviço.</p>
             </div>
           </div>
         </section>
 
-        <section id="sobre">
+        <section id="servicos">
           <div className="container">
-            <div className="title">
-              <div className="kicker">Quem somos</div>
-              <h2>Assessoria administrativa para processos técnicos e regulatórios.</h2>
-              <p className="text">
-                Atuamos na organização, condução e acompanhamento de processos documentais
-                para empresas e profissionais que precisam de regularidade, clareza e segurança.
-              </p>
+            <div className="center">
+              <div className="tag">Serviços</div>
+              <h2>Principais áreas de atuação</h2>
+              <p>Serviços administrativos para regularização, documentação técnica, obras e processos empresariais.</p>
             </div>
-          </div>
-        </section>
 
-        <section id="servicos" className="dark">
-          <div className="container">
-            <div className="title">
-              <div className="kicker">Serviços</div>
-              <h2>Soluções para empresas e profissionais técnicos.</h2>
-              <p className="text">Atendimento voltado para regularização, registros, obras, licitações e documentação técnica.</p>
-            </div>
             <div className="grid">
-              {services.map((s) => (
+              {[
+                "CREA Nacional e CFT",
+                "Registro de obra",
+                "Registro profissional",
+                "ART e responsável técnico",
+                "CAT e acervo técnico",
+                "Licitações e fornecedores",
+              ].map((s) => (
                 <div className="card" key={s}>
                   <h3>{s}</h3>
-                  <p>Assessoria administrativa, análise documental e acompanhamento conforme a necessidade do cliente.</p>
+                  <p>Orientação, organização documental e acompanhamento administrativo conforme a necessidade.</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="processo">
+        <section className="beige">
           <div className="container">
-            <div className="title">
-              <div className="kicker">Processo</div>
-              <h2>Como funciona o atendimento.</h2>
+            <div className="center">
+              <div className="tag">Procedimentos</div>
+              <h2>Demandas que atendemos</h2>
             </div>
-            <div className="process">
-              {["Análise", "Organização", "Execução", "Acompanhamento"].map((e, i) => (
-                <div className="step" key={e}>
-                  <strong>0{i + 1}</strong>
+
+            <div className="list">
+              {[
+                "Registro e regularização de empresas",
+                "Registro e regularização de profissionais",
+                "Registro de obra",
+                "ART de obra ou serviço",
+                "ART de cargo e função",
+                "CAT — Certidão de Acervo Técnico",
+                "Baixa de responsável técnico",
+                "Certidões diversas",
+                "Cadastro de fornecedores",
+                "Documentação para licitação",
+              ].map((item) => (
+                <div className="item" key={item}>{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="como">
+          <div className="container">
+            <div className="center">
+              <div className="tag">Como funciona</div>
+              <h2>Atendimento simples e organizado</h2>
+            </div>
+
+            <div className="grid">
+              {["Análise da demanda", "Organização documental", "Acompanhamento do processo"].map((e) => (
+                <div className="card" key={e}>
                   <h3>{e}</h3>
-                  <p className="text">Etapa conduzida com clareza, comunicação objetiva e foco na conclusão do procedimento.</p>
+                  <p>Comunicação objetiva, conferência de informações e suporte até a conclusão.</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="contato">
+        <section id="contato" className="beige">
           <div className="container contact">
             <div>
-              <div className="kicker">Contato</div>
-              <h2>Solicite uma análise.</h2>
-              <p className="text">WhatsApp: (11) 96703-6453<br/>E-mail: contato@plpaulino.com.br<br/>Atendimento nacional.</p>
+              <div className="tag">Contato</div>
+              <h2>Solicite orientação</h2>
+              <p>WhatsApp: (11) 96703-6453</p>
+              <p>E-mail: contato@plpaulino.com.br</p>
+              <p>Atendimento: todo o território nacional.</p>
             </div>
+
             <form>
               <input placeholder="Nome" />
               <input placeholder="Empresa ou profissão" />
-              <input placeholder="E-mail" />
               <input placeholder="Telefone / WhatsApp" />
               <textarea placeholder="Descreva sua necessidade" />
               <a className="btn" href={whatsapp}>Enviar pelo WhatsApp</a>
@@ -150,7 +160,7 @@ export default function App() {
       </main>
 
       <footer>
-        <div className="container">PL Paulino — Assessoria Administrativa em CREA, CFT, obras, registros e documentação técnica.</div>
+        <div className="container">PL Paulino — Assessoria Administrativa.</div>
       </footer>
     </div>
   );
